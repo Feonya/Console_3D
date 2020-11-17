@@ -109,7 +109,7 @@ int main() {
                 int viewRayX = (int)(g_playerX + viewRayNorVecX * viewRayLength);
                 int viewRayY = (int)(g_playerY + viewRayNorVecY * viewRayLength);
                 // 当视野射线超出平面地图范围时。
-                if (viewRayX < 0 || viewRayY < 0 || viewRayX >= MAP_W || viewRayY >> MAP_H) {
+                if (viewRayX < 0 || viewRayY < 0 || viewRayX >= MAP_W || viewRayY >= MAP_H) {
                     viewRayHitWall = true;             // 将视野射线标识为已击中墙面。
                     viewRayLength  = g_playerViewDep;  // 将视野射线长度标识为已达主角视野深度。
                 } else {
